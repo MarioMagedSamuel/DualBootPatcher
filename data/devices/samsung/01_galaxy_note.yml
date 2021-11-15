@@ -297,7 +297,50 @@
     default_brightness: 162
     pixel_format: RGBX_8888
     theme: portrait_hdpi
+    
+- name: Samsung Galaxy Note 4 Edge
+  id: tbelteskt
+  codenames:
+    - tbelteskt
+  architecture: armeabi-v7a
 
+  block_devs:
+    base_dirs:
+      - /dev/block/platform/15540000.dwmmc0/by-name
+    system:
+      - /dev/block/platfrom/15540000.dwmmc0/by-name/SYSTEM
+      - /dev/block/mmcblk0p18
+    cache:
+      - /dev/block/platfrom/15540000.dwmmc0/by-name/CACHE
+      - /dev/block/mmcblk0p19
+    # Shouldn't be an issue as long as ROMs don't touch the "hidden" partition
+    data:
+      - /dev/block/platfrom/15540000.dwmmc0/by-name/USERDATA
+      - /dev/block/mmcblk0p21
+    boot:
+      - /dev/block/platfrom/15540000.dwmmc0/by-name/BOOT
+      - /dev/block/mmcblk0p9
+    recovery:
+      - /dev/block/platfrom/15540000.dwmmc0/by-name/RECOVERY
+      - /dev/block/mmcblk0p10
+    extra:
+      - /dev/block/platform/15540000.dwmmc0/by-name/RADIO
+      - /dev/block/mmcblk0p13
+      - /dev/block/platform/15540000.dwmmc0/by-name/CDMA-RADIO
+      - /dev/block/mmcblk0p12
+
+  boot_ui:
+    supported: true
+    flags:
+      - TW_GRAPHICS_FORCE_USE_LINELENGTH
+    graphics_backends:
+      - fbdev
+    brightness_path: /sys/class/backlight/panel/brightness
+    max_brightness: 255
+    default_brightness: 162
+    pixel_format: RGBX_8888
+    theme: portrait_hdpi
+    
 - name: Samsung Galaxy Note 4 (Snapdragon)
   id: trlte
   codenames:
