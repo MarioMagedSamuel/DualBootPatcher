@@ -298,7 +298,7 @@
     pixel_format: RGBX_8888
     theme: portrait_hdpi
     
-- name: Samsung Galaxy Note 4 Edge
+- name: Samsung Galaxy Note 4 Edge (Exynos)
   id: tbelteskt
   codenames:
     - tbelteskt
